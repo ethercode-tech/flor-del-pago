@@ -13,8 +13,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://flordelpago.com");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://flordelpago.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Flor Del Pago | Cocina Ítalo-Colonial en Lozano",
     template: "%s | Flor Del Pago",
@@ -39,13 +43,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Flor Del Pago | Cocina Ítalo-Colonial en Lozano",
     description: "Sabores de Italia y el norte argentino en un refugio colonial único.",
-    url: "https://flordelpago.com",
+    url: SITE_URL,
     siteName: "Flor Del Pago",
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "/og/flor-del-pago-main.jpg",
+        url: "/og/flor-del-pago-casona-v2.jpg",
         width: 1200,
         height: 630,
         alt: "Flor Del Pago, cocina ítalo-colonial en Lozano",
@@ -56,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Flor Del Pago | Cocina Ítalo-Colonial en Lozano",
     description: "Sabores de Italia y el norte argentino en un refugio colonial único.",
-    images: ["/og/flor-del-pago-main.jpg"],
+    images: ["/og/flor-del-pago-casona-v2.jpg"],
   },
   icons: {
     icon: [
@@ -90,8 +94,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Restaurant",
               name: "Flor Del Pago",
-              image: "https://flordelpago.com/og/flor-del-pago-main.jpg",
-              url: "https://flordelpago.com",
+              image: `${SITE_URL}/og/flor-del-pago-casona-v2.jpg`,
+              url: SITE_URL,
               telephone: "+54 388 513-4101",
               address: {
                 "@type": "PostalAddress",

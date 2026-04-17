@@ -1,4 +1,4 @@
-# Design System Inspired by Lamborghini
+# Design System
 
 ## Flor Del Pago - Implementacion aplicada en landing
 
