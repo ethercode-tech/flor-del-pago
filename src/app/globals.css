@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #11110f;
+  --surface: #1b1917;
+  --surface-2: #2b2824;
+  --surface-3: #34302b;
+  --ink: #f4efe7;
+  --muted: #b7aa98;
+  --line: #4b433b;
+  --gold: #a8844f;
+  --gold-hover: #b08b57;
+  --terracotta: #9c7a4a;
+  --olive: #4d5244;
+  --olive-light: #646955;
+  --sand: #e9e1d4;
+  --blue-link: #8d8377;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-playfair);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  background-image:
+    radial-gradient(circle at 20% 0%, rgba(168, 132, 79, 0.08), transparent 34%),
+    radial-gradient(circle at 80% 100%, rgba(77, 82, 68, 0.1), transparent 32%);
+  background-attachment: fixed;
+}
+
+.slow-fade-up {
+  animation: slowFadeUp 0.9s ease-out both;
+}
+
+@keyframes slowFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.uppercase-display {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.admin-shell {
+  --muted: #d8c9b3;
+  --line: #5f564d;
+  background-image:
+    radial-gradient(circle at 18% 8%, rgba(168, 132, 79, 0.13), transparent 36%),
+    radial-gradient(circle at 88% 92%, rgba(77, 82, 68, 0.15), transparent 38%);
 }
