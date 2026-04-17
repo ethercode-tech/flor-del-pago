@@ -1,5 +1,4 @@
-# Flor Del Pago — MVP Landing + Reservas + Dashboard - Daniel Hansen
-
+# Flor Del Pago — MVP Landing + Reservas + Dashboard 
 Aplicación Next.js (App Router) con foco en conversión y operación:
 - Landing premium (marca + experiencia + SEO)
 - Motor real de reservas
