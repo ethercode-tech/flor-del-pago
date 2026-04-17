@@ -123,7 +123,7 @@ export default async function AdminDashboardPage() {
     .slice(0, 12);
 
   const customerInsights = [
-    { label: "Clientes frecuentes", value: customers.filter((c) => Number(c.visits ?? c.visitCount ?? 0) >= 3).length, note: "Vuelven este mes" },
+    { label: "Clientes frecuentes", value: customers.filter((c) => Number(c.visits ?? 0) >= 3).length, note: "Vuelven este mes" },
     { label: "Aniversarios próximos", value: reservations.filter((r) => String(r.occasionType ?? "").includes("aniversario")).length, note: "Reservas con ocasión especial" },
     { label: "VIPs", value: customers.filter((c) => Boolean(c.vip)).length, note: "Atención prioritaria" },
     { label: "Con preferencias", value: customers.filter((c) => Boolean(c.notes) || Boolean(c.allergies)).length, note: "Alergias / notas activas" },
