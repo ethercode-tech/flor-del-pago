@@ -28,7 +28,7 @@ export default function ContactPage() {
     "@type": "Restaurant",
     name: "Flor Del Pago",
     image:
-      "/la-finca.jpg",
+      "https://flordelpago.com/images/lugar/casona.jpg",
     servesCuisine: ["Italian", "Argentine", "NOA Fusion"],
     address: {
       "@type": "PostalAddress",
