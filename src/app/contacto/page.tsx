@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Encontrá Flor Del Pago en Lozano, Jujuy. Horarios, mapa, reservas y cómo llegar.",
     images: [
       {
-        url: "/og/flor-del-pago-main.jpg",
+        url: "/og/flor-del-pago-casona-v2.jpg",
         width: 1200,
         height: 630,
         alt: "Flor Del Pago, cocina ítalo-colonial en Lozano",
