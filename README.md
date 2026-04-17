@@ -64,7 +64,7 @@ Migración inicial:
 
 Incluye tablas:
 - `users`, `customers`, `tables`, `reservations`, `testimonials`
-- `products`, `orders` (listo para fase 2)
+- `products`, `orders` (listo para segunda fase)
 
 También incluye RLS por rol (`admin`, `recepcion`, `chef`) e índice para evitar doble reserva por mesa/franja.
 
